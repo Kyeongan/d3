@@ -170,6 +170,7 @@ export {
 export {
   interpolate,
   interpolateArray,
+  interpolateDate,
   interpolateNumber,
   interpolateObject,
   interpolateRound,
@@ -294,6 +295,7 @@ export {
   format,
   formatPrefix,
   formatLocale,
+  formatDefaultLocale,
   formatSpecifier,
   precisionFixed,
   precisionPrefix,
@@ -307,7 +309,8 @@ export {
   utcParse,
   isoFormat,
   isoParse,
-  timeFormatLocale
+  timeFormatLocale,
+  timeFormatDefaultLocale
 } from "d3-time-format";
 
 export {
@@ -424,32 +427,50 @@ export {
 } from "d3-brush";
 
 export {
+  chord,
+  ribbon
+} from "d3-chord";
+
+export {
+  geoAlbers,
+  geoAlbersUsa,
   geoArea,
+  geoAzimuthalEqualArea,
+  geoAzimuthalEqualAreaRaw,
+  geoAzimuthalEquidistant,
+  geoAzimuthalEquidistantRaw,
   geoBounds,
   geoCentroid,
   geoCircle,
-  geoClipExtent,
+  geoClipExtent, // DEPRECATED! Use geoIdentity.clipExtent instead.
+  geoConicConformal,
+  geoConicConformalRaw,
+  geoConicEqualArea,
+  geoConicEqualAreaRaw,
+  geoConicEquidistant,
+  geoConicEquidistantRaw,
   geoDistance,
+  geoEquirectangular,
+  geoEquirectangularRaw,
+  geoGnomonic,
+  geoGnomonicRaw,
   geoGraticule,
+  geoGraticule10,
+  geoIdentity,
   geoInterpolate,
   geoLength,
+  geoMercator,
+  geoMercatorRaw,
+  geoOrthographic,
+  geoOrthographicRaw,
   geoPath,
-  geoAlbers,
-  geoAlbersUsa,
-  geoAzimuthalEqualArea,
-  geoAzimuthalEquidistant,
-  geoConicConformal,
-  geoConicEqualArea,
-  geoConicEquidistant,
-  geoEquirectangular,
-  geoGnomonic,
   geoProjection,
   geoProjectionMutator,
-  geoMercator,
-  geoOrthographic,
-  geoStereographic,
-  geoTransverseMercator,
   geoRotation,
+  geoStereographic,
+  geoStereographicRaw,
   geoStream,
-  geoTransform
+  geoTransform,
+  geoTransverseMercator,
+  geoTransverseMercatorRaw
 } from "d3-geo";

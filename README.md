@@ -7,29 +7,39 @@
 ## Resources
 
 * [API Reference](https://github.com/d3/d3/blob/master/API.md)
-* [Release Notes](https://github.com/d3/d3/blob/master/CHANGES.md)
+* [Release Notes](https://github.com/d3/d3/releases)
 * [Gallery](https://github.com/d3/d3/wiki/Gallery)
 * [Examples](http://bl.ocks.org/mbostock)
 * [Wiki](https://github.com/d3/d3/wiki)
 
 ## Installing
 
-If you use NPM, `npm install d3@next`. Otherwise, download the [latest release](https://npmcdn.com/d3@next/build/). The released bundle supports AMD, CommonJS, and vanilla environments. Create a [custom bundle using Rollup](http://bl.ocks.org/mbostock/bb09af4c39c79cffcde4) or your preferred bundler. You can also load directly from [d3js.org](https://d3js.org):
+If you use npm, `npm install d3`. Otherwise, download the [latest release](https://github.com/d3/d3/releases/latest). The released bundle supports anonymous AMD, CommonJS, and vanilla environments. You can load directly from [d3js.org](https://d3js.org), [CDNJS](https://cdnjs.com/libraries/d3), or [unpkg](https://unpkg.com/d3/). For example:
 
 ```html
-<script src="https://d3js.org/d3.v4.0.0-alpha.50.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
 ```
 
 For the minified version:
 
 ```html
-<script src="https://d3js.org/d3.v4.0.0-alpha.50.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 ```
 
-You can also use the standalone D3 microlibraries. For example, [d3-color](https://github.com/d3/d3-color):
+You can also use the standalone D3 microlibraries. For example, [d3-selection](https://github.com/d3/d3-selection):
 
 ```html
-<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-selection.v1.js"></script>
 ```
 
-If you prefer to pin to a specific release, try [CDNJS](https://cdnjs.com/libraries/d3) or [npmcdn](https://npmcdn.com/d3@next/).
+D3 is written using [ES2015 modules](http://www.2ality.com/2014/09/es6-modules-final.html). Create a [custom bundle using Rollup](http://bl.ocks.org/mbostock/bb09af4c39c79cffcde4), Webpack, or your preferred bundler. To import D3 into an ES2015 application, either import specific symbols from specific D3 modules:
+
+```js
+import {scaleLinear} from "d3-scale";
+```
+
+Or import everything into a namespace (here, `d3`):
+
+```js
+import * as d3 from "d3";
+```
